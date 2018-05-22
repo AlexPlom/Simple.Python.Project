@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from .models import Posts
 # Create your views here.
 def index(request):
-    #return HttpResponse('Hello from posts')]
 
     posts = Posts.objects.all()[:10]
     
@@ -23,3 +22,13 @@ def details(request, id):
 
     return render(request, 'posts/details.html',context)
     
+
+def delete(request, id):
+    post = Posts.objects.get(id=id)
+
+    Posts.objects.filter(id=id).delete()
+    context = {
+        'post': post
+    }
+
+    return render(request,'posts/deleteSuccessfull.html', context)

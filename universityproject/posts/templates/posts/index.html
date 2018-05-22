@@ -4,7 +4,9 @@
 <h4 class="center-align red lighten-3" >{{title}}</h4>
 <ul class="collection">
     {% for post in posts %}
-        <li class="collection-item"><a href="/posts/details/{{post.id}}">{{post.title}}</a></li>
+    <li class="collection-item"><a class="waves-effect waves-teal btn-flat" href="/posts/details/{{post.id}}">{{post.title}}</a>
+        <a class="waves-effect waves-teal btn-flat" href="/posts/delete/{{post.id}}">{{post.id}}</a>
+    </li>
     {% endfor %}
 </ul>
 {% endblock%}
