@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <title>University Project</title>
+    <title>Welcome.</title>
 </head>
 <body>
-    <header class="container center-align">
-        <h1>University Project</h1>
+    <header class="container center-align" >
+        <h1>Welcome.</h1>
     </header>
-
     <div class="container">
         {% block content %}
         {% endblock %}
     </div>
     <br>
-
-    <a href="/admin" class="center-align" style="display:block">Admin Login</a>
+    <div class="container">
+        <a href="/admin" class="center-align btn  pink darken-1" style="display:block">Admin Login</a>
+        <br>
+        <a href="/posts/create" class="center-align btn  pink darken-2" style="display:block">Create Post</a>
+    </div>
 </body>
 </html>
