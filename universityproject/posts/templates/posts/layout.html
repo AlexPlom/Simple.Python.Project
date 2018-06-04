@@ -17,9 +17,12 @@
     </div>
     <br>
     <div class="container">
-        <a href="/admin" class="center-align btn  pink darken-1" style="display:block">Admin Login</a>
+        <form action="/logout/" method="POST">
+            <button class="center-align btn pink darken-1" style="display:block; margin:0 auto; width: 100%" type="submit"  name="action">Logout</button>
+            {% csrf_token %}
+        </form> 
         <br>
-        <a href="/posts/create" class="center-align btn  pink darken-2" style="display:block">Create Post</a>
+        <a href="/posts/create" class="center-align btn pink darken-2" style="display:block">Create Post</a>
     </div>
 </body>
 </html>
