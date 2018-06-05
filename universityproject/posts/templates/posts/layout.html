@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <title>Welcome.</title>
+    <style>
+    .personalButton  {
+        display:block; 
+        margin:0 auto;
+        width: 60%;
+    }
+    </style>
 </head>
 <body>
     <header class="container center-align" >
@@ -18,11 +25,11 @@
     <br>
     <div class="container">
         <form action="/logout/" method="POST">
-            <button class="center-align btn pink darken-1" style="display:block; margin:0 auto; width: 100%" type="submit"  name="action">Logout</button>
+            <button class="personalButton center-align btn pink darken-1" type="submit"  name="action">Logout</button>
             {% csrf_token %}
         </form> 
         <br>
-        <a href="/posts/create" class="center-align btn pink darken-2" style="display:block">Create Post</a>
+        <a href="/posts/create" class="personalButton center-align btn pink darken-2">Create Post</a>
     </div>
 </body>
 </html>
